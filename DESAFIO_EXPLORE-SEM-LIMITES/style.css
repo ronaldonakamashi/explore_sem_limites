@@ -1,0 +1,217 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Mulish", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.image-container {
+  margin-bottom: 1rem;
+}
+
+.title-container {
+  margin-bottom: 2.2rem;
+}
+
+.header-container .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.title-container h1 {
+  color: #B52184;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+}
+
+.title-container h2 {
+  color: #312D64;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+main {
+  background-color: #312D64;
+  padding: 3.3rem;
+}
+
+.figure-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.6rem 3.7rem 1.6rem 1.6rem;
+  border-radius: 1.2rem;
+}
+
+figure img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+figure figcaption {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 2.3rem;
+  color: #B52184;
+  margin-bottom: 1.2rem;
+}
+
+figure p {
+  font-size: 1rem;
+  color: #312D64;
+  font-weight: 600; 
+  line-height: 1.3rem;
+}
+
+form {
+  padding: 4.9rem 2.4rem 3.4rem 2.7rem;
+}
+
+form h2 {
+  color: #B52184;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 2.7rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input, textarea, button {
+  border-radius: 1rem;
+  padding: 0.75rem 1rem 0.75rem 0.9rem;
+
+  color: #312D64;
+
+  font-family: Mulish;
+  font-size: 1rem;
+
+  font-weight: 600;
+
+}
+
+input {
+  height: 3rem;
+}
+
+.icon-name-input {
+  background-image: url('public/images/form_img1.svg');
+}
+
+.icon-email-input {
+  background-image: url('public/images/form_img2.svg');
+}
+
+.icon-name-input, .icon-email-input {
+  padding-left: 1.9rem; /* espaço para o ícone */
+  background-size: 1.25rem; /* ajuste conforme necessário */
+  background-repeat: no-repeat;
+  background-position: 0.3rem center; /* ajuste conforme necessário */
+}
+
+button {
+  width: 9.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background-color: #343193;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.footer-container {
+  background-color: #343193;
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer-container p {
+
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+
+}
+
+@media (min-width: 1440px) {
+
+  .header-container {
+    display: grid;
+
+    grid-template-areas:
+    'title-container astronaut'
+    'roll-button astronaut';
+  }
+
+  #astronaut-image {
+    grid-area: astronaut;
+
+  }
+
+  #astronaut-image img {
+    width: 70%;
+    max-width: 70%;
+    height: auto;
+  }
+  
+  .title-container h1 , .title-container h2 {
+    grid-area: title-container;
+    width: 80%; /* Ou o valor desejado em porcentagem */
+    max-width: 80%; /* Certifique-se de que não ultrapasse a largura do contêiner pai */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title-container h1 {
+    font-size: 3vw;
+    margin-bottom: 1rem;
+  }
+
+  .title-container h2 {
+    font-size: 2vw;
+  }
+
+  #roll-buitton {
+    grid-area: roll-button;
+  }
+
+  .figure-container {
+    flex-direction: row;
+  }
+
+  .image-container {
+    margin-left: 6.8rem;
+  }
+}
